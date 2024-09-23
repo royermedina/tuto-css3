@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial HTML5/HTML6</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+    <link href="DISEÑOS/diseño.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon (1).ico">
+    <style>
+        .box-gradient {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(to right, red, yellow);
+            /* Degradado */
+            background-color: rgba(0, 0, 255, 0.5);
+            /* Color azul con transparencia */
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            /* Sombra */
+            margin: 20px auto;
+            /* Centrar la caja */
+            border-radius: 10px;
+            /* Bordes redondeados */
+        }
+
+        .box-transition {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            /* Color de fondo inicial */
+            transition: background-color 1s ease-in-out;
+            /* Transición de color */
+            margin: 20px auto;
+            /* Centrar la caja */
+            border-radius: 10px;
+            /* Bordes redondeados */
+        }
+
+        .box-transition:hover {
+            background-color: blue;
+            /* Cambio de color al pasar el ratón */
+        }
+
+        .animate {
+            animation: move 2s infinite;
+            /* Animación de movimiento */
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateX(0);
+            }
+
+            50% {
+                transform: translateX(100px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="img/image copy 2.png" alt="banner1" width="1480pxx" height="500px">
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="indexcopy.html">INICIO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="Tutorial.html">TUTORIAL</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="Amazon.html">AWS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#introduccion">Introducción</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#evolucion">Evolución</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#formularios">Formularios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#listas">Listas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#columnas">Columnas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#multimedia">Multimedia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sombras">Sombras</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#animacion">Animacion</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pagina1.html">P1</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1 id="inicio" class="mb-4">Tutorial de HTML5/HTML6</h1>
+
+        <section id="introduccion" class="mb-5">
+            <h2>1. Introducción</h2>
+            <p>HTML (HyperText Markup Language) es el lenguaje de marcado estándar para crear páginas web. Desde su
+                creación en 1993, HTML ha evolucionado significativamente para adaptarse a las crecientes necesidades de
+                la web moderna.</p>
+            <p>HTML5, lanzado oficialmente en 2014, trajo consigo una revolución en el desarrollo web, introduciendo
+                nuevas etiquetas semánticas, mejoras en formularios, y soporte nativo para contenido multimedia. Por su
+                parte, HTML6, aunque aún no es un estándar oficial, promete continuar esta evolución con mejoras en
+                áreas como la accesibilidad, la semántica y la integración con tecnologías emergentes.</p>
+        </section>
+
+        <section id="evolucion">
+            <h2>2. Evolución de HTML</h2>
+            <p>La evolución de HTML ha sido un viaje fascinante:</p>
+            <ul>
+                <li><strong>HTML 1.0 - 4.01:</strong> Establecieron las bases del lenguaje HTML, permitiendo la creación
+                    de
+                    documentos web con elementos básicos como párrafos, enlaces, imágenes y tablas. HTML 4.01 introdujo
+                    características más avanzadas, como el uso de hojas de estilo (CSS) para la presentación y scripts
+                    (JavaScript)
+                    para la interactividad, haciendo que las páginas web fueran más dinámicas y estilizadas.</li>
+                <li><strong>XHTML:</strong> Fue un intento de hacer HTML más estricto y XML-compatible, lo que implicaba
+                    seguir
+                    reglas de sintaxis más rígidas, como el uso de etiquetas cerradas y atributos en minúsculas. Esto
+                    permitió
+                    una mejor estructuración del contenido y facilitó la transición a futuras tecnologías web,
+                    asegurando la
+                    compatibilidad con dispositivos más modernos.</li>
+                <li><strong>HTML5:</strong> Representó un gran salto adelante al introducir nuevas etiquetas semánticas
+                    (header, nav, article, section, etc.), permitiendo una estructura más clara y comprensible del
+                    contenido web.
+                    Además, añadió APIs para gráficos (canvas y SVG), multimedia (audio y video), y almacenamiento
+                    local, y trajo
+                    importantes mejoras en formularios y elementos interactivos, haciéndolos más eficientes y
+                    funcionales sin
+                    necesidad de plugins externos.</li>
+                <li><strong>HTML6 (en desarrollo):</strong> Aunque aún no es oficial, se espera que HTML6 incluya
+                    mejoras
+                    significativas en cuanto a accesibilidad y seguridad, así como una integración más profunda con
+                    tecnologías
+                    emergentes como la realidad virtual (VR), realidad aumentada (AR) y la WebXR. También se anticipa la
+                    optimización de la experiencia del usuario en dispositivos móviles y el soporte para nuevas
+                    características
+                    de inteligencia artificial.</li>
+            </ul>
+
+        </section>
+        <section id="formularios">
+            <h2>3. Formularios</h2>
+            <p>HTML5 revolucionó los formularios web introduciendo nuevos tipos de input y validación del lado del
+                cliente. Esto mejora la experiencia del usuario y reduce la carga en el servidor. Los formularios de
+                HTML5 incorporan nuevos tipos de datos (input) como fechas, colores, direcciones de correo electrónico,
+                rangos, etc., y la autovalidación de datos sin JavaScript. Al mismo tiempo, veremos todas las
+                propiedades y eventos CSS3 (como <code>[required]</code> o <code>:invalid</code>) que permiten
+                configurar cualquier elemento o respuesta de autovalidación de un formulario.</p>
+
+            <form class="needs-validation" novalidate>
+                <div class="example">
+                    <div class="row mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="email" required>
+                        <div class="invalid-feedback">Por favor, introduce un email válido.</div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="telefono" class="form-label">Teléfono:</label>
+                        <input type="tel" class="form-control" id="telefono" pattern="[0-9]{9}" required>
+                        <div class="invalid-feedback">Por favor, introduce un número de 9 dígitos.</div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="fecha" class="form-label">Fecha:</label>
+                        <input type="date" class="form-control" id="fecha" required>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="color" class="form-label">Color:</label>
+                        <input type="color" class="form-control" id="color" required>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="rango" class="form-label">Rango:</label>
+                        <input type="range" class="form-range" id="rango" min="0" max="100" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+            </form>
+
+            <p>Este ejemplo muestra un formulario que utiliza nuevos tipos de input de HTML5 y autovalidación, junto con
+                las clases de Bootstrap para el estilo. Puedes probar diferentes tipos de entrada y ver cómo se validan
+                automáticamente.</p>
+        </section>
+
+        <section id="listas" class="mb-5">
+            <h2>4. Listas</h2>
+            <p>HTML ofrece tres tipos principales de listas: ordenadas (&lt;ol&gt;), no ordenadas (&lt;ul&gt;) y de
+                definición (&lt;dl&gt;). Bootstrap proporciona estilos adicionales para mejorar su apariencia.</p>
+            <div class="example">
+                <pre><code class="language-html">
+        &lt;!-- Lista no ordenada --&gt;
+        &lt;ul class="list-group"&gt;
+            &lt;li class="list-group-item"&gt;Elemento 1&lt;/li&gt;
+            &lt;li class="list-group-item"&gt;Elemento 2&lt;/li&gt;
+            &lt;li class="list-group-item"&gt;Elemento 3&lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;!-- Lista ordenada --&gt;
+        &lt;ol class="list-group list-group-numbered"&gt;
+            &lt;li class="list-group-item"&gt;Primer paso&lt;/li&gt;
+            &lt;li class="list-group-item"&gt;Segundo paso&lt;/li&gt;
+            &lt;li class="list-group-item"&gt;Tercer paso&lt;/li&gt;
+        &lt;/ol&gt;
+
+        &lt;!-- Lista de definición --&gt;
+        &lt;dl class="row"&gt;
+            &lt;dt class="col-sm-3"&gt;HTML&lt;/dt&gt;
+            &lt;dd class="col-sm-9"&gt;HyperText Markup Language&lt;/dd&gt;
+            &lt;dt class="col-sm-3"&gt;CSS&lt;/dt&gt;
+            &lt;dd class="col-sm-9"&gt;Cascading Style Sheets&lt;/dd&gt;
+        &lt;/dl&gt;
+                </code></pre>
+            </div>
+            <h3>Ejemplo de Listas</h3>
+            <div class="example">
+                <h4>Lista No Ordenada:</h4>
+                <ul class="list-group mb-3">
+                    <li class="list-group-item">Elemento 1</li>
+                    <li class="list-group-item">Elemento 2</li>
+                    <li class="list-group-item">Elemento 3</li>
+                </ul>
+                <h4>Lista Ordenada:</h4>
+                <ol class="list-group list-group-numbered mb-3">
+                    <li class="list-group-item">Primer paso</li>
+                    <li class="list-group-item">Segundo paso</li>
+                    <li class="list-group-item">Tercer paso</li>
+                </ol>
+                <h4>Lista Anidada:</h4>
+                <ul class="list-group">
+                    <li class="list-group-item">Tecnologías Web
+                        <ul class="list-group mt-2">
+                            <li class="list-group-item">HTML</li>
+                            <li class="list-group-item">CSS</li>
+                            <li class="list-group-item">JavaScript</li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item">Herramientas de Desarrollo
+                        <ul class="list-group mt-2">
+                            <li class="list-group-item">Visual Studio Code</li>
+                            <li class="list-group-item">Git</li>
+                            <li class="list-group-item">Bootstrap</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="columnas" class="mb-5">
+            <h2>5. Columnas de texto</h2>
+            <p>Bootstrap facilita la creación de diseños de múltiples columnas utilizando su sistema de rejilla. Además,
+                CSS3 proporciona propiedades específicas para dividir el texto en columnas.</p>
+            <div class="example">
+                <pre><code class="language-html">
+        &lt;!-- Usando el sistema de rejilla de Bootstrap --&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="col-md-6"&gt;
+                &lt;p&gt;Contenido de la primera columna...&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="col-md-6"&gt;
+                &lt;p&gt;Contenido de la segunda columna...&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Usando CSS3 multi-column layout --&gt;
+        &lt;style&gt;
+        .multi-column-text {
+            column-count: 2;
+            column-gap: 40px;
+        }
+        &lt;/style&gt;
+        &lt;div class="multi-column-text"&gt;
+            &lt;p&gt;Texto que se distribuirá en múltiples columnas...&lt;/p&gt;
+        &lt;/div&gt;
+                </code></pre>
+            </div>
+            <h3>Ejemplo usando el Sistema de Rejilla de Bootstrap</h3>
+            <div class="example">
+                <div class="row mb-5">
+                    <div class="col-md-6">
+                        <p>Esta es la primera columna de texto. Bootstrap facilita la creación de columnas flexibles y
+                            adaptables según el tamaño de la pantalla, permitiendo que el contenido se distribuya de
+                            manera
+                            eficiente en la página. Puedes ajustar la anchura de las columnas cambiando las clases como
+                            <code>col-md-6</code>.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Esta es la segunda columna de texto. El sistema de rejilla de Bootstrap utiliza una
+                            estructura de 12
+                            columnas, lo que te permite dividir el espacio en partes iguales o personalizadas según sea
+                            necesario,
+                            proporcionando un diseño responsivo y ordenado.</p>
+                    </div>
+                </div>
+
+                <h3>Ejemplo usando CSS3 Multi-Column Layout</h3>
+
+                <div class="multi-column-text">
+                    <p>Este párrafo se distribuirá automáticamente en dos columnas gracias a las propiedades de CSS3. Es
+                        posible ajustar el número de columnas con la propiedad <code>column-count</code> y el espacio
+                        entre
+                        ellas con <code>column-gap</code>. Esto resulta útil para mostrar contenido extenso de manera
+                        más
+                        legible y estética, especialmente en artículos o secciones de texto que requieren una mejor
+                        distribución.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="multimedia" class="mb-5">
+            <h2>6. Multimedia (Video y Audio)</h2>
+            <p>HTML5 introdujo las etiquetas &lt;video&gt; y &lt;audio&gt; para integrar contenido multimedia de manera
+                sencilla.</p>
+            <div class="example">
+                <pre><code class="language-html">
+        &lt;!-- Video --&gt;
+        &lt;video width="320" height="240" controls&gt;
+            &lt;source src="video.mp4" type="video/mp4"&gt;
+            Tu navegador no soporta la etiqueta de video.
+        &lt;/video&gt;
+
+        &lt;!-- Audio --&gt;
+        &lt;audio controls&gt;
+            &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+            Tu navegador no soporta la etiqueta de audio.
+        &lt;/audio&gt;
+                </code></pre>
+            </div>
+            <h3>Ejemplo de Video</h3>
+            <div class="example">
+                <div class="embed-responsive embed-responsive-16by9 mb-3">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/qQQiAj4CheY" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <h3>Ejemplo de Audio</h3>
+            <div class="example">
+                <audio controls class="mb-3">
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                    Tu navegador no soporta la etiqueta de audio.
+                </audio>
+                <p>El reproductor de audio anterior utiliza la etiqueta <code>&lt;audio&gt;</code> para integrar
+                    archivos de audio. El atributo <code>controls</code> agrega la barra de controles que permite
+                    reproducir, pausar y ajustar el volumen.</p>
+            </div>
+
+    </div>
+    </section>
+
+    <section id="sombras" class="mb-5">
+        <h2>7. Sombras, Transparencias y Degradados</h2>
+        <p>CSS3 permite crear sombras, transparencias y degradados para mejorar la estética de las páginas web.</p>
+        <div class="example">
+            <pre><code class="language-html">
+        &lt;style&gt;
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: rgba(0, 0, 255, 0.5);
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            background: linear-gradient(to right, red, yellow);
+        }
+        &lt;/style&gt;
+
+        &lt;div class="box"&gt;&lt;/div&gt;
+                </code></pre>
+        </div>
+        <h3>Ejemplo de Sombra, Transparencia y Degradado</h3>
+        <div class="example">
+            <div class="box-gradient"></div>
+            <p>Esta caja muestra un degradado de rojo a amarillo y un color azul con transparencia, además de una
+                sombra.</p>
+
+    </section>
+
+    <section id="animacion" class="mb-5">
+        <h2>8. Animaciones y Transiciones</h2>
+        <p>CSS3 introduce las técnicas de animación y transiciones para crear interacciones y animaciones en las páginas
+            web. Muy parecidas a las transiciones (transition) del módulo anterior, vamos a ver la funcionalidad y las
+            diferencias que existen entre las transiciones y las animaciones (animation), entre las que se pueden
+            resaltar una mayor posibilidad en la definición de movimientos, la visualización sin intervención del
+            usuario (al entrar en la página), fijar un retardo en el inicio o la reproducción indefinida de la animación
+            (loop).</p>
+        <div class="example">
+            <h3>Ejemplo de Transición</h3>
+            <div class="box-transition"></div>
+            <p>Pasa el ratón sobre esta caja roja para ver cómo cambia a azul gracias a la transición suave.</p>
+
+            <h3>Ejemplo de Animación</h3>
+            <div class="box-transition animate"></div>
+
+        </div>
+    </section>
+    </section>
+
+    <footer class="mt-5">
+        <p>&copy; 2024 Royer Danovic Medina. Todos los derechos reservados.</p>
+    </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
